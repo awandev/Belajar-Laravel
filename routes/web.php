@@ -49,3 +49,6 @@ Route::get('/pegawai/delete_permanent/{id}', 'PegawaiController@delete_permanent
 Route::get('/pegawai/delete_permanent_all', 'PegawaiController@delete_permanent_all');
 Route::get('/pegawai/restore/{id}','PegawaiController@restore');
 Route::get('/pegawai/restore_all', 'PegawaiController@restore_all');
+
+// untuk belajar relationship (One to One)
+Route::get('/pengguna', 'PenggunaController@index');
