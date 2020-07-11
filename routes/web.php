@@ -55,3 +55,7 @@ Route::get('/pengguna', 'PenggunaController@index');
 
 // untuk belajar relationship ( One to Many )
 Route::get('/artikel', 'WebController@index');
+
+// untuk belajar relationship (many to many)
+Route::get('/anggota', 'AnggotaController@index');
+
