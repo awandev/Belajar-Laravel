@@ -52,3 +52,6 @@ Route::get('/pegawai/restore_all', 'PegawaiController@restore_all');
 
 // untuk belajar relationship (One to One)
 Route::get('/pengguna', 'PenggunaController@index');
+
+// untuk belajar relationship ( One to Many )
+Route::get('/artikel', 'WebController@index');
