@@ -131,4 +131,44 @@ class PegawaiController extends Controller
         return view('pegawai.show',['pegawai' => $pegawai]);
     }
 
+
+
+    // untuk soft delete
+    // menampilkan data pegawai yang sudah dihapus 
+    public function trash() {
+        // menambil data pegawai yang sudah dihapus
+        $pegawai = Pegawai::onlyTrashed()->get();
+        return view('pegawai.trash', ['pegawai' => $pegawai]);
+    }
+
+    // untuk restore 1 data
+    public function restore($id) {
+        $pegawai = Pegawai::onlyTrashed()->where('pegawai_id', $id);
+        $pegawai->restore();
+        return redirect('/pegawai/trash');
+    }
+
+    // restore semua data
+    public function restore_all() {
+        $pegawai = Pegawai::onlyTrashed();
+        $pegawai->restore();
+        return redirect('/pegawai/trash');
+    }
+
+    // delete permanent
+    public  function delete_permanent($id) {
+        $pegawai = Pegawai::onlyTrashed()->where('pegawai_id', $id);
+        $pegawai->forceDelete();
+
+        return redirect('/pegawai/trash');
+    }
+
+    // delete permanent ALL
+    public function delete_permanent_all() {
+        $pegawai = Pegawai::onlyTrashed();
+        $pegawai->forceDelete();
+
+        return redirect('/pegawai/trash');
+    }
+
 }

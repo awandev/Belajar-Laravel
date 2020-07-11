@@ -9,7 +9,14 @@
 
 
             <h3>Data Pegawai</h3>
-
+            <a href="/pegawai">Data Pegawai</a>
+				|
+				<a href="/pegawai/trash" class="btn btn-sm btn-primary">Tong Sampah</a>
+                |
+ 
+				<a href="/pegawai/kembalikan_semua">Kembalikan Semua</a>
+				|
+				<a href="/pegawai/hapus_permanen_semua">Hapus Permanen Semua</a>
             <p>Cari Data Pegawai :</p>
 
             <div class="form-group">

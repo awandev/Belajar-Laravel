@@ -42,3 +42,10 @@ Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::post('/pegawai/update', 'PegawaiController@update');
 Route::get('/pegawai/hapus/{id}', 'PegawaiController@hapus');
 Route::get('/pegawai/cari', 'PegawaiController@cari');
+
+// untuk softdelete
+Route::get('/pegawai/trash', 'PegawaiController@trash');
+Route::get('/pegawai/delete_permanent/{id}', 'PegawaiController@delete_permanent');
+Route::get('/pegawai/delete_permanent_all', 'PegawaiController@delete_permanent_all');
+Route::get('/pegawai/restore/{id}','PegawaiController@restore');
+Route::get('/pegawai/restore_all', 'PegawaiController@restore_all');
