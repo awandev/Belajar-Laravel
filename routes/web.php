@@ -28,7 +28,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', 'HomeController@index');
 
 // with controller invoke
-Route::get('/', 'HomeController');
 Route::get('posts/{slug}', 'PostController@show');
 Route::view('/login', 'login');
 Route::view('/about', 'about');
@@ -59,3 +58,7 @@ Route::get('/artikel', 'WebController@index');
 // untuk belajar relationship (many to many)
 Route::get('/anggota', 'AnggotaController@index');
 
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
