@@ -62,3 +62,8 @@ Route::get('/anggota', 'AnggotaController@index');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+
+// untuk upload images, learn from https://www.itsolutionstuff.com/post/laravel-7-ajax-image-upload-tutorialexample.html
+Route::get('ajaxImageUpload','AjaxImageUploadController@ajaxImageUpload');
+Route::post('ajaxImageUpload','AjaxImageUploadController@ajaxImageUploadPost')->name('ajaxImageUpload');
