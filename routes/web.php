@@ -71,3 +71,6 @@ Route::post('ajaxImageUpload','AjaxImageUploadController@ajaxImageUploadPost')->
 
 // belajar enkripsi , https://www.malasngoding.com/encrypt-dan-decrypt-laravel/
 Route::get('/enkripsi', 'EnkripsiController@enkrip');
+
+// belajar hasing
+Route::get('/hashing', 'EnkripsiController@hash');
