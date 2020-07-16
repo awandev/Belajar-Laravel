@@ -74,3 +74,7 @@ Route::get('/enkripsi', 'EnkripsiController@enkrip');
 
 // belajar hasing
 Route::get('/hashing', 'EnkripsiController@hash');
+
+// belajar upload file https://www.malasngoding.com/membuat-upload-file-laravel/
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@upload_process');
