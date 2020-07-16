@@ -28,6 +28,27 @@
                 <input type="submit" value="Upload" class="btn-btn-primary">
             </form>
 
+            <h4 class="my-5">Data</h4>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Keterangan</th>
+                        <th>Opsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($gambar as $g)
+                    <tr>
+                        <td><img width="150px" src="{{ url('/data_file/'.$g->file) }}" /></td>
+                        <td>{{ $g->keterangan }}</td>
+                        <td><a href="/upload/hapus/{{$g->id}}" class="btn btn-danger">Hapus</a></td>
+                    </tr>
+                    @endforeach
+                    
+                </tbody>
+            </table>
+
         </div>
         
     </div>
