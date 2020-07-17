@@ -79,3 +79,10 @@ Route::get('/hashing', 'EnkripsiController@hash');
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@upload_process');
 Route::get('/upload/hapus/{id}', 'UploadController@hapus');
+
+
+// belajar session https://www.malasngoding.com/session-laravel/
+Route::get('/session/tampil', 'SessionController@tampilSession');
+Route::get('/session/buat', 'SessionController@buatSession');
+Route::get('/session/hapus', 'SessionController@hapusSession');
+
