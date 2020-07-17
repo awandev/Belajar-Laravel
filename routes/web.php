@@ -86,3 +86,9 @@ Route::get('/session/tampil', 'SessionController@tampilSession');
 Route::get('/session/buat', 'SessionController@buatSession');
 Route::get('/session/hapus', 'SessionController@hapusSession');
 
+
+// belajar session , membuat notifikasi dengan flash message laravel
+Route::get('/pesan', 'NotifController@index');
+Route::get('/pesan/sukses', 'NotifController@sukses');
+Route::get('/pesan/peringatan', 'NotifController@peringatan');
+Route::get('/pesan/gagal', 'NotifController@gagal');
